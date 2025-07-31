@@ -1,0 +1,28 @@
+def divide(x, y):
+    if y == 0:
+        raise ValueError("Cannot divide by zero")
+    return x / y
+
+def multiply(x, y):
+    return x * y
+
+def subtract(x, y):
+    return x - y  # Fixed the logic error (changed + to -)
+
+def add(x, y):
+    return x + y
+
+def main():
+    try:
+        a = float(input("Enter first number: "))
+        b = float(input("Enter second number: "))
+
+        print("Sum:", add(a, b))
+        print("Difference:", subtract(a, b))
+        print("Product:", multiply(a, b))
+        print("Quotient:", divide(a, b))
+    except ValueError as e:
+        print(f"Error: {e}")
+
+if __name__ == "__main__":
+    main()
